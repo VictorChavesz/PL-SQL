@@ -1,0 +1,8 @@
+BEGIN
+    UPDATE 
+        EMPLOYEES
+    SET
+        SALARY = SALARY * 1.15
+    WHERE
+        EMPLOYEE_ID = 208;
+END;
