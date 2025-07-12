@@ -5,19 +5,19 @@ DECLARE
     vDeparatamentoId            employees.DEPARTMENT_ID%type := &pdepartment_id;
 BEGIN
     IF
-        vDeparatamentoId = 50
+        vDeparatamentoId = 50 --Purchasing
     THEN
         vPercentualAumento := 20;
     ELSIF
-        vDeparatamentoId = 30
+        vDeparatamentoId = 30 --Shipping
     THEN
         vPercentualAumento := 17.5;
     ELSIF
-        vDeparatamentoId = 10
+        vDeparatamentoId = 10 --Administration
     THEN
         vPercentualAumento := 15;
     ELSIF
-        vDeparatamentoId = 60
+        vDeparatamentoId = 60 --IT
     THEN
         vPercentualAumento := 12.5;
     ELSE
