@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON
+VARIABLE vnum NUMBER
+DECLARE
+    vnum1 NUMBER(11,2) := 25435;
+    vnum2 NUMBER(11,2) := 54234;
+BEGIN
+    :vnum := (vnum1 + vnum2)/5;
+    DBMS_OUTPUT.PUT_LINE('Valor = ' || :vnum);
+EXCEPTION
+    WHEN OTHERS
+    THEN
+        DBMS_OUTPUT.PUT_LINE(SQLCODE || SQLERRM);
+END;
