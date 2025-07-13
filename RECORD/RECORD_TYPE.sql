@@ -22,6 +22,7 @@ BEGIN
         inf_func_record.LAST_NAME,
         inf_func_record.EMAIL,
         inf_func_record.PHONE_NUMBER
+        -- ou simplesmente inf_func_record
     FROM
         EMPLOYEES
     WHERE
