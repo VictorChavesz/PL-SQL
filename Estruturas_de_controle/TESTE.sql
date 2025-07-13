@@ -13,7 +13,6 @@ DBMS_OUTPUT.PUT_LINE('Loop da tabuada do 1 ate o ' || vLimite);
                 vResultado := i * j;
                 DBMS_OUTPUT.PUT_LINE(i || ' X ' || j || ' = ' || vResultado);
             END LOOP;
-            
-            EXIT LOOP1 WHEN i = vLimite;
+        EXIT LOOP1 WHEN i = vLimite;
     END LOOP;
 END;
