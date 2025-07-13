@@ -11,3 +11,4 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE(number_table(i));
     END LOOP;
 END;
+/
