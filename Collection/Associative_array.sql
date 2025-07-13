@@ -7,7 +7,7 @@ BEGIN
         number_table(i) := i;
     END LOOP;
     
-    FOR i IN 1..10 LOOP
+    FOR i IN REVERSE 1..10 LOOP
         DBMS_OUTPUT.PUT_LINE(number_table(i));
     END LOOP;
 END;
