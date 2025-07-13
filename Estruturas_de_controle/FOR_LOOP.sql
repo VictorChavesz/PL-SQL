@@ -1,9 +1,11 @@
 SET SERVEROUTPUT ON
-ACCEPT pLimite PROMPT 'Digite o valor do limite: '
+ACCEPT vInicial PROMPT 'Digite o valor do indice inicial: '
+ACCEPT vFinal   PROMPT 'Digite o valor do indice final: '
 DECLARE
-    vLimite NUMBER(38) := &pLimite;
+    vInicial NUMBER(38) := &vInicial;
+    vFinal   NUMBER(38) := &vFinal;
 BEGIN
-    FOR vIndice IN 1..vLimite LOOP
-        DBMS_OUTPUT.PUT_LINE(vIndice);
+    FOR i IN vInicial..vFinal LOOP
+        DBMS_OUTPUT.PUT_LINE(i);
     END LOOP;
 END;
