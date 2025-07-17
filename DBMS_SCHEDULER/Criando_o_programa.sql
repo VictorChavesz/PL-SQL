@@ -1,7 +1,3 @@
-DBMS_SCHEDULER.CREATE_PROGRAM();
-
-DROP TABLE AGENDA;
-
 CREATE TABLE AGENDA(
     AGENDA_ID NUMBER,
     AGENDA_DATA DATE,
@@ -26,14 +22,15 @@ END INSERE_DATA_AGENDA1;
 --Criando o programa
 
 BEGIN
-    DBMS_SCHEDULER(
+    DBMS_SCHEDULER.CREATE_PROGRAM(
     program_name => 'HR.INSERE_DATA_AGENDA1',
     program_action => 'HR.INSERE_DATA_AGENDA1',
     program_type => 'STORED_PROCEDURE',
     number_of_arguments => 0,
     comments => 'INSERE DATA AGENDA',
-    enabled => 'FALSE'
+    enabled => TRUE
     );
-    
+/*    
     DBMS_SCHEDULER.ENABLE(name => 'HR.INSERE_DATA_AGENDA1');
+*/
 END;
